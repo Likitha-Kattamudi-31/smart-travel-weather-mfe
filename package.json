@@ -1,0 +1,27 @@
+{
+  "name": "@smart-travel/weather-mfe",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Weather micro frontend for the Smart Travel Planner POC.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@module-federation/vite": "^1.20.6",
+  "@smart-travel/shared-types": "file:../smart-travel-shared-types",
+    "@smart-travel/shared-state": "file:../smart-travel-shared-state",
+    "rxjs": "^7.8.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.79",
+    "@types/react-dom": "18.2.25",
+    "@vitejs/plugin-react": "4.3.4",
+    "typescript": "5.4.5",
+    "vite": "6.4.3"
+  }
+}

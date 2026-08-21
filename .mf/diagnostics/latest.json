@@ -1,0 +1,10 @@
+{
+  "latestErrorEvent": {
+    "code": "TYPE-001",
+    "message": "Failed to generate type declaration. Execute the below cmd to reproduce and fix the error. #TYPE-001\nargs: {\"cmd\":\"\\\"C:\\\\\\\\Program Files\\\\\\\\nodejs\\\\\\\\node.exe\\\" C:\\\\Users\\\\likitha.k\\\\Desktop\\\\poc-mfes\\\\node_modules\\\\.pnpm\\\\typescript@5.4.5\\\\node_modules\\\\typescript\\\\bin\\\\tsc --project C:\\\\Users\\\\likitha.k\\\\Desktop\\\\poc-mfes\\\\apps\\\\weather-mfe\\\\node_modules\\\\.federation\\\\tsconfig.544d71e4545a186ec569e06bb89ff95f.json\"}\nView the docs to see how to solve: https://module-federation.io/guide/troubleshooting/type#type-001",
+    "args": {
+      "cmd": "\"C:\\\\Program Files\\\\nodejs\\\\node.exe\" C:\\Users\\likitha.k\\Desktop\\poc-mfes\\node_modules\\.pnpm\\typescript@5.4.5\\node_modules\\typescript\\bin\\tsc --project C:\\Users\\likitha.k\\Desktop\\poc-mfes\\apps\\weather-mfe\\node_modules\\.federation\\tsconfig.544d71e4545a186ec569e06bb89ff95f.json"
+    },
+    "timestamp": 1787139687308
+  }
+}
