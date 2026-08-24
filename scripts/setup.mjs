@@ -30,9 +30,7 @@ function run(command, args, cwd) {
       }
     );
 
-    if (result.error) {
-      throw result.error;
-    }
+    if (result.error) throw result.error;
 
     if (result.status !== 0) {
       throw new Error(
@@ -49,9 +47,7 @@ function run(command, args, cwd) {
     shell: false,
   });
 
-  if (result.error) {
-    throw result.error;
-  }
+  if (result.error) throw result.error;
 
   if (result.status !== 0) {
     throw new Error(
@@ -61,20 +57,14 @@ function run(command, args, cwd) {
 }
 
 console.log("\n========================================");
-console.log("Smart Travel Attractions MFE Setup");
+console.log("Smart Travel Weather MFE Setup");
 console.log("========================================");
-
-// --------------------------------------------------
-// 1. Clone shared dependencies
-// --------------------------------------------------
 
 for (const dependency of dependencies) {
   const dependencyPath = resolve(workspaceRoot, dependency.name);
 
   if (existsSync(dependencyPath)) {
-    console.log(
-      `Skipping ${dependency.name}; directory already exists.`
-    );
+    console.log(`Skipping ${dependency.name}; directory already exists.`);
     continue;
   }
 
@@ -87,10 +77,6 @@ for (const dependency of dependencies) {
   );
 }
 
-// --------------------------------------------------
-// 2. Install and build shared-types
-// --------------------------------------------------
-
 const sharedTypesPath = resolve(
   workspaceRoot,
   "smart-travel-shared-types"
@@ -101,10 +87,6 @@ run("pnpm", ["install"], sharedTypesPath);
 
 console.log("\nBuilding shared-types...");
 run("pnpm", ["build"], sharedTypesPath);
-
-// --------------------------------------------------
-// 3. Install and build shared-state
-// --------------------------------------------------
 
 const sharedStatePath = resolve(
   workspaceRoot,
@@ -117,19 +99,11 @@ run("pnpm", ["install"], sharedStatePath);
 console.log("\nBuilding shared-state...");
 run("pnpm", ["build"], sharedStatePath);
 
-// --------------------------------------------------
-// 4. Install Attractions dependencies
-// --------------------------------------------------
-
-console.log("\nInstalling Attractions MFE dependencies...");
+console.log("\nInstalling Weather MFE dependencies...");
 run("pnpm", ["install"], projectRoot);
 
-// --------------------------------------------------
-// 5. Complete
-// --------------------------------------------------
-
 console.log("\n========================================");
-console.log("Attractions MFE setup complete!");
+console.log("Weather MFE setup complete!");
 console.log("========================================");
 
 console.log("\nRun:");
